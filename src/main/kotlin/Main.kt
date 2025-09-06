@@ -1,7 +1,23 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
+    print("Введите строку символов: ")
+    var line = readln()
+    println()
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    if (line.isEmpty()) {
+        println("Строка пуста")
+        return
+    }
+
+    var result = ""
+    var count = 1
+
+    for (i in 1 until line.length)
+        if (line[i] == line[i - 1]) {
+            count++
+        }
+        result += line.last() + (if (count > 1) count.toString() else "")
+        println("Result -> $result")
+
+
+
 }
