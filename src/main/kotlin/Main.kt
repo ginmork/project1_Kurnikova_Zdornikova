@@ -6,6 +6,11 @@ fun main(args: Array<String>) {
     var result = ""
     var count = 1
 
+    if (line.isEmpty()) {
+        print("Error")
+        return
+    }
+
     for (i in line.indices) {
         if (i < line.length - 1 && line[i] == line[i+1]) { // Проверяем есть ли след. символ и что он такой же как текущий
             count++
