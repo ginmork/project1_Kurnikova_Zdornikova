@@ -12,15 +12,15 @@ fun main(args: Array<String>) {
     }
 
     for (i in line.indices) {
-        if (i < line.length - 1 && line[i] == line[i+1]) { // Проверяем есть ли след. символ и что он такой же как текущий
+        if (i < line.length - 1 && line[i] == line[i+1]) {
             count++
         }
         else {
-            result += line[i] // Иначе добавляем символ в рез-т
+            result += line[i]
             if (count > 1) {
-                result += count // Если символ дублировался, то добавляем кол-во повторов
+                result += count
             }
-            count = 1 // Сброс для след. проверки
+            count = 1
         }
     }
         println("Result -> $result")
