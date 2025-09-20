@@ -1,4 +1,5 @@
 import kotlin.math.ln
+
 fun main(args: Array<String>) {
     while (true) {
         println("Введите номер задачи (1-6, 0 - выход): ")
@@ -27,6 +28,7 @@ fun main(args: Array<String>) {
             "6" -> {
                 task6()
             }
+
             "0" -> return
             else -> println("Введено неправильное значение")
         }
